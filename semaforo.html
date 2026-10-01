@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semáforo TRIAGE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        /* Títulos principales */
+        .titulo-principal {
+            color: #0b2545;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .subtitulo {
+            color: #134074;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        /* Tabla de TRIAGE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+
+        th {
+            background-color: #e2eafc;
+            color: #1d3557;
+            font-size: 16px;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Atributos de color y tamaño de texto por categoría */
+        
+        /* 1. Reanimación (Rojo) */
+        .reanimacion-tipo {
+            color: #e63946;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .reanimacion-info {
+            color: #e63946;
+            font-size: 15px;
+        }
+
+        /* 2. Emergencia (Naranja) */
+        .emergencia-tipo {
+            color: #f77f00;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .emergencia-info {
+            color: #f77f00;
+            font-size: 15px;
+        }
+
+        /* 3. Urgencia (Amarillo) */
+        .urgencia-tipo {
+            color: #d4a373; /* Amarillo/Dorado visible */
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .urgencia-info {
+            color: #d4a373;
+            font-size: 15px;
+        }
+
+        /* 4. Urgencia menor (Verde) */
+        .urgencia-menor-tipo {
+            color: #2a9d8f;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .urgencia-menor-info {
+            color: #2a9d8f;
+            font-size: 15px;
+        }
+
+        /* 5. Sin urgencia (Azul) */
+        .sin-urgencia-tipo {
+            color: #1d3557;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .sin-urgencia-info {
+            color: #1d3557;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado con tamaños y colores de texto -->
+    <div>
+        <span class="titulo-principal">Semáforo TRIAGE</span>
+        <br>
+        <span class="subtitulo">urgencias</span>
+    </div>
+
+    <!-- Tabla con los datos del Semáforo TRIAGE -->
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de atención</th>
+                <th>Área de atención</th>
+                <th>Tiempo de espera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Fila 1: Reanimación -->
+            <tr>
+                <td class="reanimacion-tipo">Reanimación</td>
+                <td class="reanimacion-info">Área de reanimación</td>
+                <td class="reanimacion-info">Inmediato hasta 3 min</td>
+            </tr>
+            <!-- Fila 2: Emergencia -->
+            <tr>
+                <td class="emergencia-tipo">Emergencia</td>
+                <td class="emergencia-info">Área de reanimación</td>
+                <td class="emergencia-info">Inmediato hasta 10 min</td>
+            </tr>
+            <!-- Fila 3: Urgencia -->
+            <tr>
+                <td class="urgencia-tipo">Urgencia</td>
+                <td class="urgencia-info">Consultorio de primer contacto</td>
+                <td class="urgencia-info">Hasta 30 min</td>
+            </tr>
+            <!-- Fila 4: Urgencia menor -->
+            <tr>
+                <td class="urgencia-menor-tipo">Urgencia menor</td>
+                <td class="urgencia-menor-info">Consultorio de primer contacto o UMF</td>
+                <td class="urgencia-menor-info">Hasta 120 min</td>
+            </tr>
+            <!-- Fila 5: Sin urgencia -->
+            <tr>
+                <td class="sin-urgencia-tipo">Sin urgencia</td>
+                <td class="sin-urgencia-info">Consultorio de primer contacto o UMF</td>
+                <td class="sin-urgencia-info">Hasta 180 min</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
